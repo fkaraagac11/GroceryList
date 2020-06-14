@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f5f8;
+}
+
+.form-wrap {
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid black;
+  background: white;
+  text-align: center;
+}
+
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */

@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f5f8;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrap {
+  width: 400px;
+  height: auto;
+  margin-bottom: 500px;
+  border: 1px solid black;
+  background: white;
+  text-align: center;
+}
+
+input {
+  margin-bottom: 20px;
+}
