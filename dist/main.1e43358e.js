@@ -123,15 +123,36 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.listDiv = exports.addButton = void 0;
+exports.inputText = exports.listDiv = exports.addButton = void 0;
 var addButton = document.querySelector("#add-button");
 exports.addButton = addButton;
 var listDiv = document.querySelector(".item-list");
 exports.listDiv = listDiv;
+var inputText = document.querySelector("#input-text");
+exports.inputText = inputText;
 },{}],"src/main.js":[function(require,module,exports) {
 "use strict";
 
 var _elements = require("./elements.js");
+
+_elements.addButton.addEventListener("click", function () {
+  if (!_elements.inputText.value) {
+    throw new Error();
+    return;
+  } else {
+    var listItem = "\n        <div class=\"list-item\"> \n            <span>".concat(_elements.inputText.value, "</span>\n            <button>edit</button>\n            <button id = \"del-item\">delete</button>\n        </div>\n    ");
+    _elements.listDiv.innerHTML = _elements.listDiv.innerHTML + listItem;
+    return;
+  }
+});
+
+_elements.listDiv.addEventListener("click", function (event) {
+  console.log(event);
+
+  if (event.target.id === "del-item") {
+    event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+  }
+});
 },{"./elements.js":"src/elements.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -160,7 +181,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51246" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52117" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
