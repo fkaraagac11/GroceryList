@@ -23,3 +23,5 @@ listDiv.addEventListener("click", (event) => {
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
   }
 });
+
+let x;
